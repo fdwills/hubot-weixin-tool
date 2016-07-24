@@ -19,29 +19,29 @@ $ python -c 'import qrtools;import pyqrcode'
 ```
 
 
-## 1. 配置hubot
+## 配置hubot
 
-1. 生成自己的hubot
+* 生成自己的hubot
 ```
 $ mkdir myhubot
 $ cd myhubot
 $ yo hubot
 ```
-2. 在package.json中添加weixin依赖
+* 在package.json中添加weixin依赖
 ```
 "hubot-weixin": "1.0.6"
 ```
-3. 运行npm install
-4. 给hubot-weixin打补丁
+* 运行npm install
+* 给hubot-weixin打补丁
 ```
 # https://github.com/KasperDeng/Hubot-WeChat/pull/16/commits/fba2d7c2b37b282fdf0ebb0ae77028f7f6435d45
 $ cd node_modules/hubot-weixin
 $ wget https://github.com/KasperDeng/Hubot-WeChat/commit/fba2d7c2b37b282fdf0ebb0ae77028f7f6435d45.diff
 $ cd patch -p1 < fba2d7c2b37b282fdf0ebb0ae77028f7f6435d45.diff
 ```
-5. 将run.py拷贝到hubot目录下
-6. 写自己的hubot脚本放置到scripts下面, 参考[hubot-scripts](https://github.com/github/hubot-scripts)。scripts有个例子。
-7. 运行启动脚本run.py,按提示操作即可
+* 将run.py拷贝到hubot目录下
+* 写自己的hubot脚本放置到scripts下面, 参考[hubot-scripts](https://github.com/github/hubot-scripts)。scripts有个例子。
+* 运行启动脚本run.py,按提示操作即可
 
 ## 大致流程
 
